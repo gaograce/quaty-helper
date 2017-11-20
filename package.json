@@ -1,11 +1,10 @@
 {
   "name": "quaty-helper",
   "main": "./lib/quaty-helper",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "icon": "images/dog.png",
   "description": "js helper for quaty dog",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
     "atom-workspace": "quaty-helper:toggle"
   },
@@ -14,6 +13,5 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
