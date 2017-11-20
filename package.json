@@ -9,7 +9,7 @@
   "activationCommands": {
     "atom-workspace": "quaty-helper:toggle"
   },
-  "repository": "https://github.com/atom/quaty-helper",
+  "repository": "https://github.com/gaograce/quaty-helper",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
