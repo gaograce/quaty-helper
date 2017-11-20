@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle quaty-helper",
+        "command": "quaty-helper:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "quaty-helper",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "quaty-helper:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

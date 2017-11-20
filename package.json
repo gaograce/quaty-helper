@@ -1,0 +1,19 @@
+{
+  "name": "quaty-helper",
+  "main": "./lib/quaty-helper",
+  "version": "0.0.0",
+  "icon": "images/dog.png",
+  "description": "js helper for quaty dog",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "quaty-helper:toggle"
+  },
+  "repository": "https://github.com/atom/quaty-helper",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

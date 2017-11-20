@@ -1,0 +1,159 @@
+{
+  ".source.js": {
+    "pushFile": {
+      "prefix": "dog.pushFile",
+      "body": "dog.pushFile(${1:source},${2:target})$0",
+      "description": "pushFile函数，将本地文件source复制到手机上作为target保存"
+    },
+    "tap": {
+      "prefix": "dog.tap",
+      "body": "dog.tap(${1:x},${2:y})$0",
+      "description": "tap函数，点击手机屏幕上的坐标(x,y)"
+    },
+    "press": {
+      "prefix": "dog.press",
+      "body": "dog.press(${1:x},${2:y},${3:last})$0",
+      "description": "press函数，在手机上长按坐标(x,y)持续last毫秒"
+    },
+    "swipe": {
+      "prefix": "dog.swipe",
+      "body": "dog.swipe(${1:x1},${2:y1},${3:x2},${4:y2},${5:costTime})$0",
+      "description": "swipe函数，在手机上滑动屏幕，从坐标（x1, y1)滑动到坐标（x2,y2）,耗时costTime，匀速运动"
+    },
+    "pan": {
+      "prefix": "dog.pan",
+      "body": "dog.pan(${1:x1},${2:y1},${3:x2},${4:y2},${5:eventStr})$0",
+      "description": "pan函数，在手机上拖动，每次间隔20ms，起始点(x1,y1)，终止点(x2,y2)，途中依次经过eventStr中的点（eventStr是一个point数组转化的字符串）"
+    },
+    "inputText": {
+      "prefix": "dog.inputText",
+      "body": "dog.inputText(${1:text})$0",
+      "description": "inputText函数，往手机中输入文本，目前只支持英文，需要先选中可输入的文本框"
+    },
+    "inputKey": {
+      "prefix": "dog.inputKey",
+      "body": "dog.inputKey(${1:keyCode})$0",
+      "description": "inputKey函数，在手机中点击指定keyCode的键"
+    },
+    "mkdir": {
+      "prefix": "dog.mkdir",
+      "body": "dog.mkdir(${1:path})$0",
+      "description": "mkdir函数，在手机中创建path指定的文件夹"
+    },
+    "takeImage": {
+      "prefix": "dog.takeImage",
+      "body": "dog.takeImage(${1:path})$0",
+      "description": "takeImage函数，读取本地path位置的图片，并返回图片对象，其中path是相对路径"
+    },
+    "loadLangData": {
+      "prefix": "dog.loadLangData",
+      "body": "dog.loadLangData(${1:path})$0",
+      "description": "loadLangData函数，读取位于path位置的语言包并返回相应对象（用于ocr）"
+    },
+    "loadJSON": {
+      "prefix": "dog.loadJSON",
+      "body": "dog.loadJSON(${1:path})$0",
+      "description": "loadJSON函数，读取位于path位置的json文件并返回json对象"
+    },
+    "saveScreenshot": {
+      "prefix": "dog.saveScreenshot",
+      "body": "dog.saveScreenshot()$0",
+      "description": "saveScreenshot函数，对手机截屏并保存截图到内存之中（snapshot中）"
+    },
+    "takeScreenshot": {
+      "prefix": "dog.takeScreenshot",
+      "body": "dog.takeScreenshot()$0",
+      "description": "takeScreenshot函数，对手机截屏并返回图像对象"
+    },
+    "saveImage": {
+      "prefix": "dog.saveImage",
+      "body": "dog.saveImage(${1:image})$0",
+      "description": "saveImage函数，将图片对象image保存到内存中（snapshot中）"
+    },
+    "ocr": {
+      "prefix": "dog.ocr",
+      "body": "dog.ocr(${1:image},${2:psm},${3:language},${4:dataFile})$0",
+      "description": "ocr函数，识别图片中的文字并返回字符串，其中image是图片（对象或者路径），psm是页面分割模式， language是要识别的目标语言，dataFile是语言包，如果language是eng或者chi_sim的话，不需要语言包，其他语言为自定义语言，需要上传语言包"
+    },
+    "inRange": {
+      "prefix": "dog.inRange",
+      "body": "dog.inRange(${1:image},${2:low},${3:high})$0",
+      "description": "inRange函数，对image使用low和high两个color值进行过滤，其中low和high都是rgba对象，位于二者之间的为255，否则为0. 返回处理后的图片(可以用来过滤特定的颜色)"
+    },
+    "findContours": {
+      "prefix": "dog.findContours",
+      "body": "dog.findContours(${1:image})$0",
+      "description": "findContours函数，返回图片image的轮廓"
+    },
+    "boundingRect": {
+      "prefix": "dog.boundingRect",
+      "body": "dog.boundingRect(${1:points})$0",
+      "description": "boundingRect函数，返回包覆这一组点points的最小正矩形，其中points是点的集合"
+    },
+    "getSubimage": {
+      "prefix": "dog.getSubimage",
+      "body": "dog.getSubimage(${1:image},${2:x},${3:y},${4:width},${5:height})$0",
+      "description": "getSubimage函数，返回图片image在左上角坐标(x,y)，宽度width和高度height位置的子图"
+    },
+    "mean": {
+      "prefix": "dog.mean",
+      "body": "dog.mean(${1:image})$0",
+      "description": "mean函数，返回图片image中所有像素的平均值"
+    },
+    "markImage": {
+      "prefix": "dog.markImage",
+      "body": "dog.markImage(${1:image},${2:rects})$0",
+      "description": "markImage函数，在图片image上面画rects表示的矩形，并返回绘制后的结果图片（其中rects是矩形集合）"
+    },
+    "imageThreshold": {
+      "prefix": "dog.imageThreshold",
+      "body": "dog.imageThreshold(${1:image},${2:threshold},${3:maxValue},${4:type})$0",
+      "description": "imageThreshold函数，图片二值化，对图片image根据阈值threshold进行二值化，如果大于阈值则为maxValue，否则为0，类型type可以选，表示使用的二值化方法：0–THRESH_BINARY；1–THRESH_BINARY_INV；2–THRESH_TRUNC；3–THRESH_TOZERO；4–THRESH_TOZERO_INV；7–THRESH_MASK；8–THRESH_OTSU；16–THRESH_TRIANGLE；"
+    },
+    "compareImage": {
+      "prefix": "dog.compareImage",
+      "body": "dog.compareImage(${1:image1},${2:image2},${3:type})$0",
+      "description": "compareImage函数，对两个图片image1和image2进行比较，类型type可选，返回相似度。type的值：0-直方图模式, 1-RGB模式, 2-pHash模式，缺省值为0-直方图模式"
+    },
+    "findImage": {
+      "prefix": "dog.findImage",
+      "body": "dog.findImage(${1:image},${2:targets})$0",
+      "description": "findImage函数，在image图片里面查找targets返回位置信息，其中targets是对象数组，其中的对象包括image和threshold两部分，image是要查找的子图，threshold是需要满足的相似度的阈值"
+    },
+    "findImageOnScreenshot": {
+      "prefix": "dog.findImageOnScreenshot",
+      "body": "dog.findImageOnScreenshot(${1:targets})$0",
+      "description": "findImageOnScreenshot函数，在手机屏幕截图里面查找targets返回位置信息，其中targets是对象数组，其中的对象包括image和threshold两部分，image是要查找的子图，threshold是需要满足的相似度的阈值"
+    },
+    "touchMatchImgsOnScreenshot": {
+      "prefix": "dog.touchMatchImgsOnScreenshot",
+      "body": "dog.touchMatchImgsOnScreenshot(${1:targets})$0",
+      "description": "touchMatchImgsOnScreenshot函数，在手机屏幕上找到指定图片的位置并点击找到的位置(可能点击多个位置)，其中targets是一个对象数组，样式： {image: image, threshold: threshold} , image可以是图片对象或者是图片路径，threshold是进行图片查找的时候的阈值，将会返回相似度大于阈值的位置"
+    },
+    "touchFirstMatchImgOnScreenshot": {
+      "prefix": "dog.touchFirstMatchImgOnScreenshot",
+      "body": "dog.touchFirstMatchImgOnScreenshot(${1:image},${2:maxThreshold},${3:minThreshold})$0",
+      "description": "touchFirstMatchImgOnScreenshot函数，在手机屏幕上找到指定图片image（image可以是图片对象或者是图片路径）的位置并点击找到的位置（只点击阈值最大的一个位置，从最大相似度阈值开始查找，找到一个就返回）"
+    },
+    "isImageOnScreenshot": {
+      "prefix": "dog.isImageOnScreenshot",
+      "body": "dog.isImageOnScreenshot(${1:image},${2:maxThreshold},${3:minThreshold})$0",
+      "description": "isImageOnScreenshot函数，判断图片是否在屏幕上存在（从最大阈值开始直到最小阈值进行查找，找到就返回true，否则返回false）"
+    },
+    "subAreaChanged": {
+      "prefix": "dog.subAreaChanged",
+      "body": "dog.subAreaChanged(${1:image},${2:x},${3:y},${4:width},${5:height},${6:threshold})$0",
+      "description": "subAreaChanged函数，判断屏幕上的子区域是否发生变化。对手机屏幕截屏，在获得的截屏上求子图，在获得的子图上查找image，threshold是相似度需要满足的最小值。如果找到说明没变化，返回false，否则true。"
+    },
+    "sleep": {
+      "prefix": "sleep",
+      "body": "sleep(${1:ms})$0",
+      "description": "sleep函数，睡眠ms毫秒"
+    },
+    "log": {
+      "prefix": "console.log",
+      "body": "console.log(${1:log})$0",
+      "description": "console.log函数，将log输出到ScriptLog中"
+    }
+  }
+}
