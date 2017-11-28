@@ -157,30 +157,22 @@
     },
     "runApp": {
         "prefix": "dog.runApp",
-        "body": [
-            "dog.runApp(${1:appPackage})$0"
-        ],
+        "body": "dog.runApp(${1:appPackage})$0",
         "description": "runApp函数，根据包名appPackage启动应用程序"
     },
     "stopApp": {
         "prefix": "dog.stopApp",
-        "body": [
-            "dog.stopApp(${1:appPackage})$0"
-        ],
+        "body":"dog.stopApp(${1:appPackage})$0",
         "description": "stopApp函数，根据包名appPackage关闭应用程序"
     },
     "deleteText": {
         "prefix": "dog.deleteText",
-        "body": [
-            "dog.deleteText(${1:num})$0"
-        ],
+        "body":"dog.deleteText(${1:num})$0",
         "description": "deleteText函数，根据删除光标处的num个字符"
     },
     "waitImage": {
         "prefix": "dog.waitImage",
-        "body": [
-            "dog.waitImage(${1:image},${2:maxThres},${3:minThres},${4:waitTime})$0"
-        ],
+        "body":"dog.waitImage(${1:image},${2:maxThres},${3:minThres},${4:waitTime})$0",
         "description": "waitImage函数，根据提供的最大阈值maxThres，最小阈值minThres，等待图片image的出现，等待时间超过waitTime后，停止等待返回"
     }
   }
