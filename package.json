@@ -1,7 +1,7 @@
 {
   "name": "quaty-helper",
   "main": "./lib/quaty-helper",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "icon": "images/dog.png",
   "description": "js helper for quaty dog",
   "keywords": [],
