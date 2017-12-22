@@ -174,6 +174,32 @@
         "prefix": "dog.waitImage",
         "body":"dog.waitImage(${1:image},${2:maxThres},${3:minThres},${4:waitTime})$0",
         "description": "waitImage函数，根据提供的最大阈值maxThres，最小阈值minThres，等待图片image的出现，等待时间超过waitTime后，停止等待返回"
+    },
+    "installApp": {
+        "prefix": "dog.installApp",
+        "body": "dog.installApp(${1:path})$0",
+        "description": "installApp函数，安装指定路径path的app"
+    },
+    "unInstallApp": {
+        "prefix": "dog.unInstallApp",
+        "body": "dog.unInstallApp(${1:package})$0",
+        "description": "unInstallApp函数，卸载指定包名package的app"
+    },
+    "getRotation": {
+        "prefix": "dog.getRotation",
+        "body": "dog.getRotation()$0",
+        "description": "getRotation函数，获取手机当前旋转数据(0, 90, 270)，其中0为垂直状态"
+    },
+    "findBestMatchImage": {
+        "prefix": "dog.findBestMatchImage",
+        "body": "dog.findBestMatchImage(${1:srcImg},${2:targets},${3:type})$0",
+        "description": "findBestMatchImage函数，根据类型对srcImg和targets中的每一个图片进行比较返回最相似的图片，索引和相似度。"
+    },
+    "findNImageOnScreenshot": {
+        "prefix": "dog.findNImageOnScreenshot",
+        "body":"dog.findNImageOnScreenshot(${1:n},${2:image},${3:threshold})$0",
+        "description": "findNImageOnScreenshot函数，在屏幕上找到n个与image匹配度最高的图像的中心坐标。threshold表示可接受的最小阈值，默认0.8。其中返回的结果中，包括坐标x，y以及相似度r。"
     }
+
   }
 }
